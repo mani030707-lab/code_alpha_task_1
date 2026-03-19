@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-<script src="app.js"></script>
 <body>
-
+ 
   <!-- ===== AUTH MODAL ===== -->
   <div id="auth-modal" class="auth-modal-overlay">
     <div class="auth-modal">
@@ -21,7 +18,7 @@
         <button class="auth-tab active" data-tab="login">Login</button>
         <button class="auth-tab" data-tab="signup">Sign Up</button>
       </div>
-
+ 
       <div id="auth-login" class="auth-form">
         <h2>Welcome Back</h2>
         <input type="email" id="login-email" placeholder="Email" autocomplete="email">
@@ -34,7 +31,7 @@
           Continue with Google
         </button>
       </div>
-
+ 
       <div id="auth-signup" class="auth-form" style="display:none;">
         <h2>Create Account</h2>
         <input type="text" id="signup-name" placeholder="Full Name">
@@ -51,7 +48,7 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- ===== STANDARD HEADER ===== -->
   <div class="SKR-header js-standard-header">
     <div class="SKR-header-left-section">
@@ -76,19 +73,19 @@
         <span class="orders-text">&amp; Orders</span>
       </a>
       <a class="cart-link header-link" href="javascript:void(0);" onclick="navigateTo('checkout')">
-        <img class="cart-icon" src="images/icons/cart-icon .png" alt="Cart">
+        <img class="cart-icon" src="images/icons/cart-icon.png" alt="Cart">
         <div class="cart-quantity js-cart-quantity">0</div>
         <div class="cart-text">Cart</div>
       </a>
     </div>
   </div>
-
+ 
   <!-- ===== CHECKOUT HEADER ===== -->
-  <div class="checkout-header js-checkout-header" style="display: none;">
+  <div class="checkout-header js-checkout-header" style="display:none;">
     <div class="header-content">
       <div class="checkout-header-left-section">
         <a href="javascript:void(0);" onclick="navigateTo('home')" class="header-link">
-          <img class="SKR-logo" src="photos/SKR_LOGO1BG.png" alt="SKR Logo">
+          <img class="SKR-logo" src="svs.png" alt="SKR Logo">
           <img class="SKR-mobile-logo" src="photos/SKR-SHORT-LOGO!.png" alt="SKR Mobile Logo">
         </a>
       </div>
@@ -102,14 +99,14 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- ===== PAGES ===== -->
   <div id="page-home" class="page-view">
     <div class="main">
       <div class="products-grid js-products-grid"></div>
     </div>
   </div>
-
+ 
   <div id="page-checkout" class="page-view" style="display:none;">
     <div class="main">
       <div class="page-title">Review your order</div>
@@ -142,18 +139,18 @@
       </div>
     </div>
   </div>
-
+ 
   <div id="page-orders" class="page-view" style="display:none;">
     <div class="main">
       <div class="page-title">Your Orders</div>
       <div class="orders-grid"></div>
     </div>
   </div>
-
+ 
   <div id="page-tracking" class="page-view" style="display:none;">
     <div class="main">
       <div class="order-tracking">
-        <a class="back-to-orders-link link-primary" href="javascript:void(0);" onclick="navigateTo('orders')">←View all orders</a>
+        <a class="back-to-orders-link link-primary" href="javascript:void(0);" onclick="navigateTo('orders')">← View all orders</a>
         <div class="delivery-date">Loading...</div>
         <div class="product-info">Loading product name...</div>
         <div class="product-info">Quantity: ...</div>
@@ -164,13 +161,13 @@
           <div class="progress-label">Delivered</div>
         </div>
         <div class="progress-bar-container">
-          <div class="progress-bar" style="width: 0%;"></div>
+          <div class="progress-bar" style="width:0%;"></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Supabase CDN -->
+  <!-- Supabase CDN — load ONCE here at the bottom -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="app.js"></script>
 </body>
